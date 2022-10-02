@@ -37,8 +37,9 @@ public class EmployeeRecord {
     
     public void deleteEmployee(Employee ep){
         records.remove(ep);
-        
     }
     
-    
+    public int listSize(){
+        return records.size();
+    }
 }
