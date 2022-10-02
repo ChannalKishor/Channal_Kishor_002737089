@@ -118,19 +118,23 @@
                   <Component id="txtPhoneNumber" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblGender" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="txtGender" linkSize="4" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblPositionTitle" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtPositionTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblGender" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblPositionTitle" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtPositionTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblStartDate" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtStartDate" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                       <Component id="lblEmail" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblStartDate" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtStartDate" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="126" max="32767" attributes="0"/>

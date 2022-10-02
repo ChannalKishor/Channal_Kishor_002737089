@@ -63,6 +63,8 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblName = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
         lblAge = new javax.swing.JLabel();
+        btnUpdate = new javax.swing.JButton();
+        btnSave = new javax.swing.JButton();
 
         lblTitle.setFont(new java.awt.Font("Segoe UI", 0, 22)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -141,6 +143,20 @@ public class ViewJPanel extends javax.swing.JPanel {
 
         lblAge.setText("Age:");
 
+        btnUpdate.setText("Update");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
+
+        btnSave.setText("Save");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -157,7 +173,11 @@ public class ViewJPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnView)
-                            .addComponent(btnDelete)))
+                            .addComponent(btnDelete)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnUpdate)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnSave))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -204,10 +224,10 @@ public class ViewJPanel extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtTeamInfo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtLevel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnDelete, btnView});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnDelete, btnSave, btnUpdate, btnView});
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblEmail, lblLevel, lblPhoneNumber, lblPositionTitle, lblTeamInfo});
 
@@ -225,11 +245,15 @@ public class ViewJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnView)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnDelete))
+                        .addComponent(btnDelete)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnUpdate)
+                            .addComponent(btnSave)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblName)
                             .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -312,6 +336,16 @@ public class ViewJPanel extends javax.swing.JPanel {
         populateTable();
         
         
+        //adding code to erase the text fields after deleting
+        txtName.setText("");
+        txtEid.setText("");
+        txtAge.setText("");
+        txtGender.setText("");
+        txtLevel.setText("");
+        txtTeamInfo.setText("");
+        txtPositionTitle.setText("");
+        txtPhoneNumber.setText("");
+        txtEmail.setText("");
         
     }//GEN-LAST:event_btnDeleteActionPerformed
 
@@ -338,9 +372,100 @@ public class ViewJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnViewActionPerformed
 
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        // TODO add your handling code here:
+        int selectedRowIndex = tblRecords.getSelectedRow();
+        
+        if (selectedRowIndex < 0) {
+            JOptionPane.showMessageDialog(this, "Please select a row to update");
+            return;
+        }
+        
+        //once row is selected, create a Employee object out of it - selectedEmployee
+        DefaultTableModel model = (DefaultTableModel) tblRecords.getModel();
+        Employee selectedEmployee = (Employee) model.getValueAt(selectedRowIndex,0);
+        
+        //now display selected row details onto text boxes 
+        txtName.setText(selectedEmployee.getName());
+        txtEid.setText(String.valueOf(selectedEmployee.getEid()));
+        txtAge.setText(String.valueOf(selectedEmployee.getAge()));
+        txtGender.setText(selectedEmployee.getGender());
+        txtLevel.setText(selectedEmployee.getLevel());
+        txtTeamInfo.setText(selectedEmployee.getTeamInfo());
+        txtPositionTitle.setText(selectedEmployee.getPositionTable());
+        txtPhoneNumber.setText(String.valueOf(selectedEmployee.getPhoneNumber()));
+        txtEmail.setText(selectedEmployee.getEmail());
+        
+        JOptionPane.showMessageDialog(this, "Edit the record and save");
+                
+    }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        // TODO add your handling code here:
+        
+        //this will be same rowIndex sa 'Update'
+        int selectedRowIndex = tblRecords.getSelectedRow();
+        
+        
+        //not needed as the row is seleced 
+//        if (selectedRowIndex < 0) {
+//            JOptionPane.showMessageDialog(this, "Please select a row to update");
+//            return;
+//        }
+        
+        //create obj out of the selected row
+        DefaultTableModel model = (DefaultTableModel) tblRecords.getModel();
+        Employee selectedEmployee = (Employee) model.getValueAt(selectedRowIndex,0);
+        
+        
+        
+        //now get the details from the text boxes
+        String name = txtName.getText();
+        int eid = Integer.parseInt(txtEid.getText());
+        int age = Integer.parseInt(txtAge.getText());
+        String gender = txtGender.getText();
+        String level = txtLevel.getText();
+        String teamInfo = txtTeamInfo.getText();
+        String positionTable = txtPositionTitle.getText();
+        int phoneNumber = Integer.parseInt(txtPhoneNumber.getText());
+        String email = txtEmail.getText();
+        
+        //update the values into the same arrayList object
+        
+        //store into the same ArrayList object
+        selectedEmployee.setName(name);
+        selectedEmployee.setEid(eid);
+        selectedEmployee.setAge(age);
+        selectedEmployee.setGender(gender);
+        selectedEmployee.setLevel(level);
+        selectedEmployee.setTeamInfo(teamInfo);
+        selectedEmployee.setPositionTable(positionTable);
+        selectedEmployee.setPhoneNumber(phoneNumber);
+        selectedEmployee.setEmail(email);
+        
+        //Displaying the message to user after updation
+        JOptionPane.showMessageDialog(this, "Employee Record Updated");
+        
+        //clear the textboxes after update is completed
+        txtName.setText("");
+        txtEid.setText("");
+        txtAge.setText("");
+        txtGender.setText("");
+        txtLevel.setText("");
+        txtTeamInfo.setText("");
+        txtPositionTitle.setText("");
+        txtPhoneNumber.setText("");
+        txtEmail.setText("");
+      
+        //populate table
+        populateTable();
+    }//GEN-LAST:event_btnSaveActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnSave;
+    private javax.swing.JButton btnUpdate;
     private javax.swing.JButton btnView;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAge;
