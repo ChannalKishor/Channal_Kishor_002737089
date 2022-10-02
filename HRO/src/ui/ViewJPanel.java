@@ -4,6 +4,8 @@
  */
 package ui;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import model.Employee;
 import model.EmployeeRecord;
 
@@ -21,7 +23,10 @@ public class ViewJPanel extends javax.swing.JPanel {
     public ViewJPanel(EmployeeRecord records) {
         initComponents();
         
-        this.records = records;
+        this.records = records;  
+        
+        populateTable();
+        
     }
 
     /**
@@ -85,8 +90,18 @@ public class ViewJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblRecords);
 
         btnView.setText("View");
+        btnView.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewActionPerformed(evt);
+            }
+        });
 
         btnDelete.setText("Delete");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         lblGender.setText("Gender:");
 
@@ -268,6 +283,7 @@ public class ViewJPanel extends javax.swing.JPanel {
 
     private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtEmailActionPerformed
 
     private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
@@ -277,6 +293,50 @@ public class ViewJPanel extends javax.swing.JPanel {
     private void txtEidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEidActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEidActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        // TODO add your handling code here:
+        int selectedRowIndex = tblRecords.getSelectedRow();
+        
+        if (selectedRowIndex < 0) {
+            JOptionPane.showMessageDialog(this, "Please select a row to delete");
+            return;
+        } 
+        DefaultTableModel model = (DefaultTableModel) tblRecords.getModel();
+        Employee selectedEmployee = (Employee) model.getValueAt(selectedRowIndex,0);
+        
+        records.deleteEmployee(selectedEmployee);
+        
+        JOptionPane.showMessageDialog(this, "Employee Record Deleted");
+        
+        populateTable();
+        
+        
+        
+    }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+        // TODO add your handling code here:
+        int selectedRowIndex = tblRecords.getSelectedRow();
+        
+        if (selectedRowIndex < 0) {
+            JOptionPane.showMessageDialog(this, "Please select a row to delete");
+            return;
+        } 
+        DefaultTableModel model = (DefaultTableModel) tblRecords.getModel();
+        Employee selectedEmployee = (Employee) model.getValueAt(selectedRowIndex,0);
+        
+        txtName.setText(selectedEmployee.getName());
+        txtEid.setText(String.valueOf(selectedEmployee.getEid()));
+        txtAge.setText(String.valueOf(selectedEmployee.getAge()));
+        txtGender.setText(selectedEmployee.getGender());
+        txtLevel.setText(selectedEmployee.getLevel());
+        txtTeamInfo.setText(selectedEmployee.getTeamInfo());
+        txtPositionTitle.setText(selectedEmployee.getPositionTable());
+        txtPhoneNumber.setText(String.valueOf(selectedEmployee.getPhoneNumber()));
+        txtEmail.setText(selectedEmployee.getEmail());
+        
+    }//GEN-LAST:event_btnViewActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -306,4 +366,21 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtStartDate;
     private javax.swing.JTextField txtTeamInfo;
     // End of variables declaration//GEN-END:variables
+
+    private void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) tblRecords.getModel();
+        model.setRowCount(0);
+        
+        //clean table
+        for (Employee ep : records.getRecords()){
+            
+            Object row[] = new Object[4];
+            row[0] = ep;
+            row[1] = ep.getEid();
+            row[2] = ep.getLevel();
+            row[3] = ep.getPositionTable();
+            
+            model.addRow(row);
+        }
+    }
 }

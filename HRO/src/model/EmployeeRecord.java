@@ -34,4 +34,11 @@ public class EmployeeRecord {
         records.add(newEmployee);
         return newEmployee;
     }
+    
+    public void deleteEmployee(Employee ep){
+        records.remove(ep);
+        
+    }
+    
+    
 }
