@@ -19,8 +19,17 @@ public class Employee {
     private String positionTable;
     private int phoneNumber;
     private String email;
-    
+    private String date;
+    private String photoUrl;
     //Getter and Setters
+
+    public String getPhotoUrl() {
+        return photoUrl;
+    }
+
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+    }
 
     public String getName() {
         return name;
