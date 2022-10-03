@@ -111,8 +111,6 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblImageDisplay.setText("ImageDisplay");
-
         lblImage.setText("Image:");
 
         txtImageDisplay.addActionListener(new java.awt.event.ActionListener() {
@@ -308,6 +306,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtPhoneNumber.setText("");
         txtEmail.setText("");
         txtImageDisplay.setText("");
+        lblImageDisplay.setIcon(null);
         
     }//GEN-LAST:event_btnSaveActionPerformed
 

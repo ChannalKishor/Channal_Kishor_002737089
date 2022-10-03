@@ -261,9 +261,6 @@
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImageDisplay">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="ImageDisplay"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblImage">
       <Properties>
