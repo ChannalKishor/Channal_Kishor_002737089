@@ -18,7 +18,7 @@
  * Doctor can also create and update Vital Signs.
 
  * **Sequence Diagram**:
-	 * System Admin
+	 * [System Admin](https://github.com/ChannalKishor/Channal_Kishor_002737089/blob/Assignment_2/Diagrams/SystemAdmin%20SD.png)
 	 * Patient and Doctor
 
  * **Class Diagram**
