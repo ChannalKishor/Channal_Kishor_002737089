@@ -10,8 +10,9 @@ import Hospital.Person.Person;
  *
  * @author chinm
  */
-public class Patient extends Person{
-      private int patientId;
+public class Patient extends Person {
+
+    private int patientId;
 
     public int getPatientId() {
         return patientId;
@@ -20,13 +21,11 @@ public class Patient extends Person{
     public void setPatientId(int patientId) {
         this.patientId = patientId;
     }
-    
-    
+
     @Override
-    public String toString(){
+    public String toString() {
         String patId = String.valueOf(patientId);
         return patId;
     }
-      
-      
+
 }

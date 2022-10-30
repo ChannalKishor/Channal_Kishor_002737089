@@ -12,11 +12,11 @@ import Hospital.Patient.PatientDirectory;
  * @author chinm
  */
 public class HospitalSystem {
-    
+
     PatientDirectory patientList;
     DoctorDirectory doctorList;
-    
-    public HospitalSystem(){
+
+    public HospitalSystem() {
         patientList = new PatientDirectory();
         doctorList = new DoctorDirectory();
     }
@@ -36,6 +36,5 @@ public class HospitalSystem {
     public void setDoctorList(DoctorDirectory doctorList) {
         this.doctorList = doctorList;
     }
-    
-    
+
 }

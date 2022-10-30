@@ -45,6 +45,8 @@ public class HospitalAdminDashboard extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        panelControl.setBackground(new java.awt.Color(204, 204, 204));
+
         btnHospital.setText("Hospital");
         btnHospital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +69,11 @@ public class HospitalAdminDashboard extends javax.swing.JFrame {
         });
 
         btnEncounter.setText("Encounter");
+        btnEncounter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEncounterActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelControlLayout = new javax.swing.GroupLayout(panelControl);
         panelControl.setLayout(panelControlLayout);
@@ -97,13 +104,17 @@ public class HospitalAdminDashboard extends javax.swing.JFrame {
                 .addComponent(btnPatient)
                 .addGap(18, 18, 18)
                 .addComponent(btnEncounter)
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(307, Short.MAX_VALUE))
         );
 
         SplitPane.setLeftComponent(panelControl);
 
+        panelWork.setBackground(new java.awt.Color(204, 255, 255));
+
         lbltitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lbltitle.setText("Hospital Management System");
+        lbltitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbltitle.setText("HOSPITAL ADMIN");
+        lbltitle.setBorder(new javax.swing.border.MatteBorder(null));
 
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
@@ -119,17 +130,17 @@ public class HospitalAdminDashboard extends javax.swing.JFrame {
         panelWork.setLayout(panelWorkLayout);
         panelWorkLayout.setHorizontalGroup(
             panelWorkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelWorkLayout.createSequentialGroup()
+            .addGroup(panelWorkLayout.createSequentialGroup()
                 .addContainerGap(78, Short.MAX_VALUE)
                 .addGroup(panelWorkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnLogOut)
-                    .addGroup(panelWorkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelWorkLayout.createSequentialGroup()
-                            .addComponent(lbltitle, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(85, 85, 85))
-                        .addGroup(panelWorkLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelWorkLayout.createSequentialGroup()
+                        .addGroup(panelWorkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblRole)
-                            .addGap(127, 127, 127)))))
+                            .addComponent(btnLogOut))
+                        .addGap(309, 309, 309))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelWorkLayout.createSequentialGroup()
+                        .addComponent(lbltitle, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(76, 76, 76))))
         );
         panelWorkLayout.setVerticalGroup(
             panelWorkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,7 +151,7 @@ public class HospitalAdminDashboard extends javax.swing.JFrame {
                 .addComponent(lblRole)
                 .addGap(18, 18, 18)
                 .addComponent(btnLogOut)
-                .addContainerGap(281, Short.MAX_VALUE))
+                .addContainerGap(421, Short.MAX_VALUE))
         );
 
         SplitPane.setRightComponent(panelWork);
@@ -185,6 +196,10 @@ public class HospitalAdminDashboard extends javax.swing.JFrame {
         loginJframe.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
+
+    private void btnEncounterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEncounterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEncounterActionPerformed
 
     /**
      * @param args the command line arguments

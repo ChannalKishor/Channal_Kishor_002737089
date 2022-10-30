@@ -63,9 +63,10 @@ public class SystemAdminDashboard extends javax.swing.JFrame {
         panelWork = new javax.swing.JPanel();
         lbltitle = new javax.swing.JLabel();
         btnLogOut = new javax.swing.JButton();
-        lblRole = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        panelControl.setBackground(new java.awt.Color(204, 204, 204));
 
         btnHospital.setText("Hospital");
         btnHospital.addActionListener(new java.awt.event.ActionListener() {
@@ -129,13 +130,18 @@ public class SystemAdminDashboard extends javax.swing.JFrame {
                 .addComponent(btnPatient)
                 .addGap(18, 18, 18)
                 .addComponent(btnEncounter)
-                .addContainerGap(357, Short.MAX_VALUE))
+                .addContainerGap(507, Short.MAX_VALUE))
         );
 
         SplitPane.setLeftComponent(panelControl);
 
+        panelWork.setBackground(new java.awt.Color(255, 204, 204));
+        panelWork.setToolTipText("");
+
         lbltitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lbltitle.setText("Hospital Management System");
+        lbltitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbltitle.setText("SYSTEM ADMIN");
+        lbltitle.setBorder(new javax.swing.border.MatteBorder(null));
 
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
@@ -144,31 +150,27 @@ public class SystemAdminDashboard extends javax.swing.JFrame {
             }
         });
 
-        lblRole.setFont(new java.awt.Font("Segoe UI Emoji", 1, 12)); // NOI18N
-        lblRole.setText("Role: SYSTEM ADMIN");
-
         javax.swing.GroupLayout panelWorkLayout = new javax.swing.GroupLayout(panelWork);
         panelWork.setLayout(panelWorkLayout);
         panelWorkLayout.setHorizontalGroup(
             panelWorkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelWorkLayout.createSequentialGroup()
-                .addContainerGap(120, Short.MAX_VALUE)
+            .addGroup(panelWorkLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(panelWorkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnLogOut)
-                    .addComponent(lbltitle, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblRole))
-                .addGap(85, 85, 85))
+                    .addComponent(lbltitle, javax.swing.GroupLayout.DEFAULT_SIZE, 634, Short.MAX_VALUE)
+                    .addGroup(panelWorkLayout.createSequentialGroup()
+                        .addComponent(btnLogOut)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         panelWorkLayout.setVerticalGroup(
             panelWorkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelWorkLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lbltitle)
-                .addGap(77, 77, 77)
-                .addComponent(lblRole)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(btnLogOut)
-                .addContainerGap(461, Short.MAX_VALUE))
+                .addContainerGap(708, Short.MAX_VALUE))
         );
 
         SplitPane.setRightComponent(panelWork);
@@ -263,7 +265,6 @@ public class SystemAdminDashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnHospital;
     private javax.swing.JButton btnLogOut;
     private javax.swing.JButton btnPatient;
-    private javax.swing.JLabel lblRole;
     private javax.swing.JLabel lbltitle;
     private javax.swing.JPanel panelControl;
     private javax.swing.JPanel panelWork;

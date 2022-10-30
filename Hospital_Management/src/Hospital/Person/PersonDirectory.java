@@ -11,10 +11,10 @@ import java.util.ArrayList;
  * @author chinm
  */
 public class PersonDirectory {
-    
+
     private ArrayList<Person> PersonList;
-    
-    public PersonDirectory(){
+
+    public PersonDirectory() {
         this.PersonList = new ArrayList<Person>();
     }
 
@@ -25,6 +25,5 @@ public class PersonDirectory {
     public void setPersonList(ArrayList<Person> PersonList) {
         this.PersonList = PersonList;
     }
-    
-    
+
 }

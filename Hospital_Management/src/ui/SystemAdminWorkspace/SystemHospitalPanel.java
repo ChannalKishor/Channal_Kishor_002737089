@@ -26,6 +26,7 @@ public class SystemHospitalPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lbltitle = new javax.swing.JLabel();
         btnEdit = new javax.swing.JButton();
         txtPhNo = new javax.swing.JTextField();
         btnDelete = new javax.swing.JButton();
@@ -41,9 +42,16 @@ public class SystemHospitalPanel extends javax.swing.JPanel {
         txtName = new javax.swing.JTextField();
         btnView = new javax.swing.JButton();
         txtCity = new javax.swing.JTextField();
-        lblTitle = new javax.swing.JLabel();
         txtEmailId = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
+        lbltitle1 = new javax.swing.JLabel();
+
+        lbltitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lbltitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbltitle.setText("SYSTEM ADMIN: Doctor");
+        lbltitle.setBorder(new javax.swing.border.MatteBorder(null));
+
+        setBackground(new java.awt.Color(255, 204, 204));
 
         btnEdit.setText("Edit");
 
@@ -118,9 +126,6 @@ public class SystemHospitalPanel extends javax.swing.JPanel {
             }
         });
 
-        lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblTitle.setText("Hospital Screen");
-
         txtEmailId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEmailIdActionPerformed(evt);
@@ -129,16 +134,17 @@ public class SystemHospitalPanel extends javax.swing.JPanel {
 
         btnSave.setText("Save");
 
+        lbltitle1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lbltitle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbltitle1.setText("SYSTEM ADMIN: Hospital");
+        lbltitle1.setBorder(new javax.swing.border.MatteBorder(null));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(255, 255, 255)
-                .addComponent(lblTitle)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
+                .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,9 +153,8 @@ public class SystemHospitalPanel extends javax.swing.JPanel {
                                 .addComponent(btnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                        .addComponent(scrollPaneDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(25, 25, 25))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                        .addComponent(scrollPaneDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
@@ -177,16 +182,22 @@ public class SystemHospitalPanel extends javax.swing.JPanel {
                                         .addComponent(lblPhNo)
                                         .addGap(37, 37, 37)
                                         .addComponent(txtPhNo, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(42, 42, 42))))
+                        .addGap(17, 17, 17)))
+                .addGap(23, 23, 23))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbltitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblTitle)
+                .addComponent(lbltitle1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
+                        .addGap(3, 3, 3)
                         .addComponent(btnCreate)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnView)
@@ -194,9 +205,7 @@ public class SystemHospitalPanel extends javax.swing.JPanel {
                         .addComponent(btnEdit)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnDelete))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(scrollPaneDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(scrollPaneDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblName)
@@ -215,7 +224,7 @@ public class SystemHospitalPanel extends javax.swing.JPanel {
                     .addComponent(txtEmailId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnSave)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addGap(99, 99, 99))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -259,7 +268,8 @@ public class SystemHospitalPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblEmailId;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblPhNo;
-    private javax.swing.JLabel lblTitle;
+    private javax.swing.JLabel lbltitle;
+    private javax.swing.JLabel lbltitle1;
     private javax.swing.JScrollPane scrollPaneDoctor;
     private javax.swing.JTable tableDoctor;
     private javax.swing.JTextField txtAddress;

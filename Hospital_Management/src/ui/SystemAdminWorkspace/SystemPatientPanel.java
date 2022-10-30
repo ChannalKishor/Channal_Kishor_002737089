@@ -19,14 +19,14 @@ public class SystemPatientPanel extends javax.swing.JPanel {
      * Creates new form PatientPanel
      */
     PatientDirectory patientList;
-    
+
     public SystemPatientPanel(PatientDirectory patientList) {
         initComponents();
         this.patientList = patientList;
         populateTable();
         btnClear.setVisible(false);
 //        btnClear.setVisible(false);
-        
+
     }
 
     /**
@@ -53,7 +53,6 @@ public class SystemPatientPanel extends javax.swing.JPanel {
         txtName = new javax.swing.JTextField();
         btnView = new javax.swing.JButton();
         txtAddress = new javax.swing.JTextField();
-        lblTitle = new javax.swing.JLabel();
         txtAge = new javax.swing.JTextField();
         lblCity = new javax.swing.JLabel();
         txtCity = new javax.swing.JTextField();
@@ -71,6 +70,9 @@ public class SystemPatientPanel extends javax.swing.JPanel {
         txtEmailId = new javax.swing.JTextField();
         btnClear = new javax.swing.JButton();
         btnSave = new javax.swing.JButton();
+        lbltitle1 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 204, 204));
 
         btnEdit.setText("Edit");
         btnEdit.addActionListener(new java.awt.event.ActionListener() {
@@ -155,9 +157,6 @@ public class SystemPatientPanel extends javax.swing.JPanel {
             }
         });
 
-        lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblTitle.setText("Patient Screen");
-
         txtAge.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAgeActionPerformed(evt);
@@ -207,6 +206,11 @@ public class SystemPatientPanel extends javax.swing.JPanel {
             }
         });
 
+        lbltitle1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lbltitle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbltitle1.setText("SYSTEM ADMIN: Patient");
+        lbltitle1.setBorder(new javax.swing.border.MatteBorder(null));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -251,7 +255,7 @@ public class SystemPatientPanel extends javax.swing.JPanel {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(lblUsername))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblAddress)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -277,28 +281,27 @@ public class SystemPatientPanel extends javax.swing.JPanel {
                             .addComponent(txtPhNo, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(52, 52, 52))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblTitle)
-                        .addGap(253, 253, 253))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnClear)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSave)
-                        .addGap(45, 45, 45))))
+                .addContainerGap(460, Short.MAX_VALUE)
+                .addComponent(btnClear)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnSave)
+                .addGap(45, 45, 45))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbltitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbltitle1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblTitle)
-                        .addGap(33, 33, 33)
+                        .addGap(18, 18, 18)
                         .addComponent(scrollPanePatient, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
+                        .addGap(24, 24, 24)
                         .addComponent(btnCreate)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnView)
@@ -306,7 +309,7 @@ public class SystemPatientPanel extends javax.swing.JPanel {
                         .addComponent(btnEdit)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnDelete)))
-                .addGap(57, 57, 57)
+                .addGap(76, 76, 76)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblRole)
                     .addComponent(txtRole, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -360,7 +363,7 @@ public class SystemPatientPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnClear)
                     .addComponent(btnSave))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -374,7 +377,7 @@ public class SystemPatientPanel extends javax.swing.JPanel {
 
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
         // TODO add your handling code here:
-        btnClear.setVisible(false);  
+        btnClear.setVisible(false);
         String role = txtRole.getText();
         Integer patientId = Integer.parseInt(txtPatientId.getText());
         String username = txtUsername.getText();
@@ -388,9 +391,9 @@ public class SystemPatientPanel extends javax.swing.JPanel {
         String address = txtAddress.getText();
         char[] pass = txtPassword.getPassword();
         String password = new String(pass);
-        
+
         Patient newPatient = patientList.addPatient();
-        
+
         newPatient.setRole(role);
         newPatient.setPatientId(patientId);
         newPatient.setUsername(username);
@@ -403,9 +406,9 @@ public class SystemPatientPanel extends javax.swing.JPanel {
         newPatient.setCommunity(community);
         newPatient.setAddress(address);
         newPatient.setPassword(password);
-        
+
         JOptionPane.showMessageDialog(this, "Patient Created Successfully");
-        
+
         txtPatientId.setText("");
         txtUsername.setText("");
         txtName.setText("");
@@ -417,28 +420,28 @@ public class SystemPatientPanel extends javax.swing.JPanel {
         txtCommunity.setText("");
         txtAddress.setText("");
         txtPassword.setText("");
-        
+
         populateTable();
-        
+
     }//GEN-LAST:event_btnCreateActionPerformed
 
-    public void populateTable(){
+    public void populateTable() {
         DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
         model.setRowCount(0);
-        
-        for(Patient pat : patientList.getPatientList()){
-            
+
+        for (Patient pat : patientList.getPatientList()) {
+
             Object[] row = new Object[5];
-            row[0] = pat; 
+            row[0] = pat;
             row[1] = pat.getName();
             row[2] = pat.getAge();
             row[3] = pat.getGender();
             row[4] = pat.getPhno();
-             
+
             model.addRow(row);
         }
     }
-    
+
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNameActionPerformed
@@ -448,16 +451,14 @@ public class SystemPatientPanel extends javax.swing.JPanel {
         btnSave.setVisible(false);
         btnClear.setVisible(true);
         Integer selectedRowIndex = tablePatient.getSelectedRow();
-        
-        if (selectedRowIndex<0){
-            
+
+        if (selectedRowIndex < 0) {
+
             JOptionPane.showMessageDialog(this, "Please select a row to view.");
             return;
-        }
-        
-        else{
+        } else {
             DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
-            Patient selectedPat = (Patient) model.getValueAt(selectedRowIndex,0);
+            Patient selectedPat = (Patient) model.getValueAt(selectedRowIndex, 0);
 
             txtPatientId.setText(String.valueOf(selectedPat.getPatientId()));
             txtUsername.setText(selectedPat.getUsername());
@@ -493,19 +494,17 @@ public class SystemPatientPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         btnClear.setVisible(false);
         Integer selectedRowIndex = tablePatient.getSelectedRow();
-        
-        if (selectedRowIndex<0){
-            
+
+        if (selectedRowIndex < 0) {
+
             JOptionPane.showMessageDialog(this, "Please select a row to delete.");
             return;
-        }
-        
-        else{
+        } else {
             DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
-            Patient selectedPat = (Patient) model.getValueAt(selectedRowIndex,0);
-            
+            Patient selectedPat = (Patient) model.getValueAt(selectedRowIndex, 0);
+
             patientList.deletePatient(selectedPat);
-            
+
             JOptionPane.showMessageDialog(this, "Patient deleted successfully.");
             populateTable();
         }
@@ -530,18 +529,16 @@ public class SystemPatientPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         btnSave.setVisible(true);
         Integer selectedRowIndex = tablePatient.getSelectedRow();
-        
-        if (selectedRowIndex<0){
-            
+
+        if (selectedRowIndex < 0) {
+
             JOptionPane.showMessageDialog(this, "Please select a row to update.");
             return;
-        }
-        
-        else{
-            
+        } else {
+
             DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
-            Patient selectedPat = (Patient) model.getValueAt(selectedRowIndex,0);
-            
+            Patient selectedPat = (Patient) model.getValueAt(selectedRowIndex, 0);
+
             txtPatientId.setText(String.valueOf(selectedPat.getPatientId()));
             txtUsername.setText(selectedPat.getUsername());
             txtName.setText(selectedPat.getName());
@@ -553,28 +550,22 @@ public class SystemPatientPanel extends javax.swing.JPanel {
             txtCommunity.setText(selectedPat.getCommunity());
             txtAddress.setText(selectedPat.getAddress());
             txtPassword.setText(selectedPat.getPassword());
-            
-            
-            
-            
-            
+
         }
     }//GEN-LAST:event_btnEditActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
         Integer selectedRowIndex = tablePatient.getSelectedRow();
-        
-        if (selectedRowIndex<0){
-            
+
+        if (selectedRowIndex < 0) {
+
             JOptionPane.showMessageDialog(this, "Please select a row to view.");
             return;
-        }
-        
-        else{
+        } else {
             DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
-            Patient selectedPat = (Patient) model.getValueAt(selectedRowIndex,0);
-            
+            Patient selectedPat = (Patient) model.getValueAt(selectedRowIndex, 0);
+
             selectedPat.setPatientId(Integer.parseInt(txtPatientId.getText()));
             selectedPat.setUsername(txtUsername.getText());
             selectedPat.setName(txtName.getText());
@@ -586,13 +577,13 @@ public class SystemPatientPanel extends javax.swing.JPanel {
             selectedPat.setCommunity(txtCommunity.getText());
             selectedPat.setAddress(txtAddress.getText());
             selectedPat.setPassword(txtPassword.getText());
-            
+
             JOptionPane.showMessageDialog(this, "Patient details updated successfully.");
-            
+
             populateTable();
-            
+
         }
-        
+
     }//GEN-LAST:event_btnSaveActionPerformed
 
 
@@ -614,8 +605,8 @@ public class SystemPatientPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblPatientId1;
     private javax.swing.JLabel lblPhNo;
     private javax.swing.JLabel lblRole;
-    private javax.swing.JLabel lblTitle;
     private javax.swing.JLabel lblUsername;
+    private javax.swing.JLabel lbltitle1;
     private javax.swing.JScrollPane scrollPanePatient;
     private javax.swing.JTable tablePatient;
     private javax.swing.JTextField txtAddress;

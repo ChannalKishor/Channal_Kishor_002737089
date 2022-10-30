@@ -9,14 +9,14 @@ import java.util.ArrayList;
 /**
  *
  * @author chinm
- */
+ */ 
 public class DoctorDirectory {
-    
+
     private ArrayList<Doctor> doctorList;
-    
-    public DoctorDirectory(){
+
+    public DoctorDirectory() {
         doctorList = new ArrayList<Doctor>();
-        
+
     }
 
     public ArrayList<Doctor> getDoctorList() {
@@ -26,16 +26,16 @@ public class DoctorDirectory {
     public void setDoctorList(ArrayList<Doctor> doctorList) {
         this.doctorList = doctorList;
     }
-    
-    public Doctor addDoctor(){
+
+    public Doctor addDoctor() {
         Doctor newDoc = new Doctor();
         doctorList.add(newDoc);
         return newDoc;
     }
-    
-    public void deleteDoctor(Doctor doc){
+
+    public void deleteDoctor(Doctor doc) {
         doctorList.remove(doc);
-        
+
     }
-    
+
 }

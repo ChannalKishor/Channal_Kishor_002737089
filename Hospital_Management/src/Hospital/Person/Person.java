@@ -9,7 +9,7 @@ package Hospital.Person;
  * @author chinm
  */
 public class Person {
-    
+
     protected String role;
     protected int userId;
     protected String username;
@@ -103,8 +103,6 @@ public class Person {
     public void setAddress(String address) {
         this.address = address;
     }
-    
-    
 
     public long getPhno() {
         return phno;
@@ -129,8 +127,5 @@ public class Person {
     public void setPassword(String password) {
         this.password = password;
     }
-  
-    
-    
-    
+
 }

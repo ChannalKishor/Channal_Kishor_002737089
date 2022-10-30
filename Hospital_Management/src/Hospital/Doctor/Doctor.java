@@ -11,7 +11,7 @@ import Hospital.Person.Person;
  * @author chinm
  */
 public class Doctor extends Person {
-    
+
     private int doctorId;
     private int yearsOfExp;
     private long salary;
@@ -48,12 +48,11 @@ public class Doctor extends Person {
     public void setSpecialization(String specialization) {
         this.specialization = specialization;
     }
-    
+
     @Override
-    public String toString(){
+    public String toString() {
         String docId = String.valueOf(doctorId);
         return docId;
     }
-    
-    
+
 }
