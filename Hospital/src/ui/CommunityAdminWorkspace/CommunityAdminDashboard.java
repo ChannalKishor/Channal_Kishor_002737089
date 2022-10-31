@@ -60,9 +60,8 @@ public class CommunityAdminDashboard extends javax.swing.JFrame {
         btnCommunity = new javax.swing.JButton();
         btnHouse = new javax.swing.JButton();
         panelWork = new javax.swing.JPanel();
-        lblRole = new javax.swing.JLabel();
-        lbltitle = new javax.swing.JLabel();
         btnLogOut = new javax.swing.JButton();
+        lbltitle = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -118,16 +117,12 @@ public class CommunityAdminDashboard extends javax.swing.JFrame {
                 .addComponent(btnCommunity)
                 .addGap(18, 18, 18)
                 .addComponent(btnHouse)
-                .addContainerGap(359, Short.MAX_VALUE))
+                .addContainerGap(409, Short.MAX_VALUE))
         );
 
         SplitPane.setLeftComponent(panelControl);
 
-        lblRole.setFont(new java.awt.Font("Segoe UI Emoji", 1, 12)); // NOI18N
-        lblRole.setText("Role: COMMUNITY ADMIN");
-
-        lbltitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lbltitle.setText("Hospital Management System");
+        panelWork.setBackground(new java.awt.Color(255, 204, 204));
 
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
@@ -136,31 +131,31 @@ public class CommunityAdminDashboard extends javax.swing.JFrame {
             }
         });
 
+        lbltitle.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        lbltitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbltitle.setText("COMMUNITY ADMIN");
+
         javax.swing.GroupLayout panelWorkLayout = new javax.swing.GroupLayout(panelWork);
         panelWork.setLayout(panelWorkLayout);
         panelWorkLayout.setHorizontalGroup(
             panelWorkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelWorkLayout.createSequentialGroup()
-                .addContainerGap(91, Short.MAX_VALUE)
+            .addGroup(panelWorkLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(panelWorkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbltitle, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbltitle, javax.swing.GroupLayout.DEFAULT_SIZE, 634, Short.MAX_VALUE)
                     .addGroup(panelWorkLayout.createSequentialGroup()
-                        .addGap(283, 283, 283)
-                        .addGroup(panelWorkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnLogOut)
-                            .addComponent(lblRole))))
-                .addGap(39, 39, 39))
+                        .addComponent(btnLogOut)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         panelWorkLayout.setVerticalGroup(
             panelWorkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelWorkLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lbltitle)
-                .addGap(59, 59, 59)
-                .addComponent(lblRole)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(207, 207, 207)
                 .addComponent(btnLogOut)
-                .addContainerGap(492, Short.MAX_VALUE))
+                .addContainerGap(409, Short.MAX_VALUE))
         );
 
         SplitPane.setRightComponent(panelWork);
@@ -169,7 +164,7 @@ public class CommunityAdminDashboard extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 705, Short.MAX_VALUE)
+            .addComponent(SplitPane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -255,7 +250,6 @@ public class CommunityAdminDashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnHome;
     private javax.swing.JButton btnHouse;
     private javax.swing.JButton btnLogOut;
-    private javax.swing.JLabel lblRole;
     private javax.swing.JLabel lbltitle;
     private javax.swing.JPanel panelControl;
     private javax.swing.JPanel panelWork;
