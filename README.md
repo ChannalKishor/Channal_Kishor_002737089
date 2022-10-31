@@ -22,3 +22,4 @@
 	 * [Patient and Doctor](https://github.com/ChannalKishor/Channal_Kishor_002737089/blob/Assignment_2/Diagrams/Patient%20and%20Hospital%20SD.png)
 
  * **Class Diagram**
+ ![ERD](https://github.com/ChannalKishor/Channal_Kishor_002737089/blob/Assignment_2/Diagrams/SystemAdmin%20SD.png)
