@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="cc" green="ff" red="cc" type="rgb"/>
+    </Property>
+  </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -16,76 +21,77 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="lblTitle" alignment="1" pref="734" max="32767" attributes="0"/>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="btnClear" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btnSave" min="-2" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblCreatedBy" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblBloodGroup" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                      <Component id="txtDoctor" min="-2" pref="149" max="-2" attributes="0"/>
+                                      <Component id="txtBloodGroup" min="-2" pref="149" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txtPatientName" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="txtHospital" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtEncounterNo" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                      <Component id="txtPatientUname" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="btnEdit1" min="-2" pref="67" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblPatientName" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblHospital" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblEncounterNo" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblPatientUname" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="btnView" alignment="1" min="-2" pref="67" max="-2" attributes="0"/>
+                              <Component id="btnCreate" alignment="1" min="-2" pref="67" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblPatientName" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblHospital" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblEncounterNo" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblPatientUname" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblPresc" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblBP" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblPulse" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblTemp" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jScrollPane1" pref="149" max="32767" attributes="0"/>
-                              <Component id="txtBp" max="32767" attributes="0"/>
-                              <Component id="txtPulse" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtTemp" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                          <Component id="btnEdit1" alignment="1" min="-2" pref="67" max="-2" attributes="0"/>
-                                          <Component id="btnView" alignment="1" min="-2" pref="67" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="btnCreate" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                                  <Component id="scrollPaneEncounter" min="-2" pref="509" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblCreatedBy" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblBloodGroup" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                          <Component id="txtDoctor" min="-2" pref="149" max="-2" attributes="0"/>
-                                          <Component id="txtBloodGroup" min="-2" pref="149" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="txtPatientName" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="txtHospital" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtEncounterNo" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                          <Component id="txtPatientUname" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lbltitle1" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="193" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblBP" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPulse" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblTemp" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPresc" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="btnClear" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="btnSave" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
+                          <Component id="txtBp" max="32767" attributes="0"/>
+                          <Component id="txtPulse" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtTemp" min="-2" pref="149" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="scrollPaneEncounter" min="-2" pref="509" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="98" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -93,94 +99,88 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+              <Component id="lbltitle1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="96" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <Component id="btnCreate" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnView" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnEdit1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="scrollPaneEncounter" min="-2" pref="152" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="scrollPaneEncounter" min="-2" pref="152" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="40" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblBP" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblBP" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtBp" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txtPulse" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblPulse" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPulse" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblTemp" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblTemp" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtTemp" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblPresc" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPresc" linkSize="2" min="-2" max="-2" attributes="0"/>
                           <Component id="jScrollPane1" min="-2" pref="63" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnClear" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnSave" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="txtEncounterNo" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblEncounterNo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblEncounterNo" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblHospital" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblHospital" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtHospital" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txtPatientName" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblPatientName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPatientName" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txtPatientUname" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblPatientUname" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPatientUname" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="lblCreatedBy" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCreatedBy" linkSize="2" min="-2" max="-2" attributes="0"/>
                           <Component id="txtDoctor" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txtBloodGroup" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblBloodGroup" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblBloodGroup" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="btnClear" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnSave" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lblTitle">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="18" style="1"/>
-        </Property>
-        <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Vital Signs Screen"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="btnCreate">
       <Properties>
         <Property name="text" type="java.lang.String" value="Create"/>
@@ -395,6 +395,15 @@
     <Component class="javax.swing.JLabel" name="lblPatientUname">
       <Properties>
         <Property name="text" type="java.lang.String" value="Patient Username:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbltitle1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="36" style="1"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="DOCTOR ADMIN: VITAL SIGNS"/>
       </Properties>
     </Component>
   </SubComponents>

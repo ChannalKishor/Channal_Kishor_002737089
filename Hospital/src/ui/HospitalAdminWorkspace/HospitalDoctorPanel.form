@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="66" green="0" red="99" type="rgb"/>
+    </Property>
+  </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -16,200 +21,202 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="lblTitle" alignment="1" pref="797" max="32767" attributes="0"/>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Component id="btnEdit1" alignment="1" min="-2" pref="67" max="-2" attributes="0"/>
-                              <Component id="btnView" alignment="1" min="-2" pref="67" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="btnCreate" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="btnEdit1" linkSize="1" alignment="1" min="-2" pref="67" max="-2" attributes="0"/>
+                          <Component id="btnView" linkSize="1" alignment="1" min="-2" pref="67" max="-2" attributes="0"/>
+                          <Component id="btnCreate" linkSize="1" min="-2" pref="67" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="78" max="32767" attributes="0"/>
                       <Component id="scrollPaneDoctor" min="-2" pref="537" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Component id="btnClear" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="btnSave" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                       <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                          <Component id="lblRole" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblRole" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="lblDoctorId" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblUsername" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblName" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblAge" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblGender" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblUsername" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblName" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblAge" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblGender" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="lblEmailId" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblEmailId" linkSize="3" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Component id="lblPhNo1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblPhNo1" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtAge" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                  <Component id="txtAge" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
                                   <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtName" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtDoctorId" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtUsername" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtRole" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                      <Component id="txtName" linkSize="5" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtDoctorId" linkSize="5" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtUsername" linkSize="5" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtRole" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="txtGender" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                  <Component id="txtEmailId" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                  <Component id="txtPhNo1" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                  <Component id="txtGender" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                  <Component id="txtEmailId" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                  <Component id="txtPhNo1" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblYearsOfExp" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblSpecialization" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblCommunity" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblCity" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblState" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblCountry" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblPassword" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblHospital" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblYearsOfExp" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblSpecialization" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblCommunity" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblCity" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblState" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblCountry" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblPassword" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblHospital" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtHospital" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                  <Component id="txtCity" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                  <Component id="txtYearsOfExp" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                  <Component id="txtSpecialization" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                  <Component id="txtState" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                  <Component id="txtCountry" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                  <Component id="txtPassword" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                  <Component id="txtCommunity" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                  <Component id="txtHospital" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                  <Component id="txtCity" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                  <Component id="txtYearsOfExp" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                  <Component id="txtSpecialization" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                  <Component id="txtState" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                  <Component id="txtCountry" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                  <Component id="txtPassword" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                                  <Component id="txtCommunity" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lbltitle" pref="755" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              <Component id="lbltitle" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="39" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="btnCreate" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="btnCreate" linkSize="2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btnView" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnEdit1" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnView" linkSize="2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="btnEdit1" linkSize="2" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="scrollPaneDoctor" min="-2" pref="152" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtRole" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblRole" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtRole" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblRole" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lblDoctorId" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtDoctorId" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtDoctorId" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblUsername" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtUsername" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblUsername" linkSize="4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtUsername" linkSize="6" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtName" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblName" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtName" linkSize="6" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblName" linkSize="4" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtAge" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblAge" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtAge" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblAge" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="txtGender" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblGender" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtGender" linkSize="6" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblGender" linkSize="4" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtEmailId" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblEmailId" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtEmailId" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblEmailId" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtPhNo1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblPhNo1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPhNo1" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPhNo1" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="lblCommunity" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblCommunity" linkSize="4" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="txtCommunity" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtCommunity" linkSize="6" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txtCity" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblCity" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtCity" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblCity" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lblState" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtState" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblState" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtState" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lblHospital" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtHospital" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblHospital" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtHospital" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txtSpecialization" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblSpecialization" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtSpecialization" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblSpecialization" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lblYearsOfExp" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtYearsOfExp" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblYearsOfExp" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtYearsOfExp" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtCountry" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblCountry" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtCountry" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCountry" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtPassword" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblPassword" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                          <Component id="txtPassword" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPassword" linkSize="4" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -218,21 +225,12 @@
                   <Component id="btnSave" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnClear" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="44" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lblTitle">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="18" style="1"/>
-        </Property>
-        <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Doctor Screen"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="btnCreate">
       <Properties>
         <Property name="text" type="java.lang.String" value="Create"/>
@@ -494,6 +492,15 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClearActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbltitle">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Calibri" size="36" style="1"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="HOSPITAL ADMIN: DOCTOR"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

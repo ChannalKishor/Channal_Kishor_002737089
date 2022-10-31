@@ -60,10 +60,12 @@ public class PatientFindDoctorPanel extends javax.swing.JPanel {
 
         scrollPaneDoctor = new javax.swing.JScrollPane();
         tableDoctor = new javax.swing.JTable();
-        lblTitle = new javax.swing.JLabel();
         lblSearch = new javax.swing.JLabel();
         txtSearch = new javax.swing.JTextField();
         btnHospitalList = new javax.swing.JButton();
+        lbltitle1 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(0, 204, 204));
 
         tableDoctor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -86,10 +88,6 @@ public class PatientFindDoctorPanel extends javax.swing.JPanel {
         });
         scrollPaneDoctor.setViewportView(tableDoctor);
 
-        lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitle.setText("Doctor List");
-
         lblSearch.setText("Search:");
 
         txtSearch.addActionListener(new java.awt.event.ActionListener() {
@@ -110,41 +108,43 @@ public class PatientFindDoctorPanel extends javax.swing.JPanel {
             }
         });
 
+        lbltitle1.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        lbltitle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbltitle1.setText("PATIENT: SEARCH DOCTORS");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scrollPaneDoctor, javax.swing.GroupLayout.DEFAULT_SIZE, 776, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(scrollPaneDoctor, javax.swing.GroupLayout.DEFAULT_SIZE, 719, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnHospitalList, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblSearch)
                                 .addGap(12, 12, 12)
                                 .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(lbltitle1, javax.swing.GroupLayout.DEFAULT_SIZE, 776, Short.MAX_VALUE))
                 .addContainerGap())
-            .addComponent(lblTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(lblTitle)
-                .addGap(49, 49, 49)
+                .addContainerGap()
+                .addComponent(lbltitle1)
+                .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblSearch))
-                .addGap(42, 42, 42)
+                .addGap(36, 36, 36)
                 .addComponent(scrollPaneDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
+                .addGap(42, 42, 42)
                 .addComponent(btnHospitalList)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(266, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -194,7 +194,7 @@ public class PatientFindDoctorPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnHospitalList;
     private javax.swing.JLabel lblSearch;
-    private javax.swing.JLabel lblTitle;
+    private javax.swing.JLabel lbltitle1;
     private javax.swing.JScrollPane scrollPaneDoctor;
     private javax.swing.JTable tableDoctor;
     private javax.swing.JTextField txtSearch;

@@ -63,9 +63,8 @@ public class DoctorDashboard extends javax.swing.JFrame {
         btnVitalSigns = new javax.swing.JButton();
         btnHome = new javax.swing.JButton();
         panelWork = new javax.swing.JPanel();
-        lbltitle = new javax.swing.JLabel();
-        lblRole = new javax.swing.JLabel();
         btnLogOut = new javax.swing.JButton();
+        lbltitle1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -114,17 +113,12 @@ public class DoctorDashboard extends javax.swing.JFrame {
                 .addComponent(btnEncounter)
                 .addGap(18, 18, 18)
                 .addComponent(btnVitalSigns)
-                .addContainerGap(431, Short.MAX_VALUE))
+                .addContainerGap(481, Short.MAX_VALUE))
         );
 
         SplitPane.setLeftComponent(panelControl);
 
-        lbltitle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lbltitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbltitle.setText("Hospital Management System");
-
-        lblRole.setFont(new java.awt.Font("Segoe UI Emoji", 1, 12)); // NOI18N
-        lblRole.setText("Role: DOCTOR");
+        panelWork.setBackground(new java.awt.Color(204, 255, 204));
 
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
@@ -133,28 +127,31 @@ public class DoctorDashboard extends javax.swing.JFrame {
             }
         });
 
+        lbltitle1.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        lbltitle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbltitle1.setText("DOCTOR ADMIN");
+
         javax.swing.GroupLayout panelWorkLayout = new javax.swing.GroupLayout(panelWork);
         panelWork.setLayout(panelWorkLayout);
         panelWorkLayout.setHorizontalGroup(
             panelWorkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbltitle, javax.swing.GroupLayout.DEFAULT_SIZE, 587, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelWorkLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelWorkLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(panelWorkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnLogOut)
-                    .addComponent(lblRole, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40))
+                    .addComponent(lbltitle1, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
+                    .addGroup(panelWorkLayout.createSequentialGroup()
+                        .addComponent(btnLogOut)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         panelWorkLayout.setVerticalGroup(
             panelWorkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelWorkLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lbltitle)
-                .addGap(34, 34, 34)
-                .addComponent(lblRole)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbltitle1)
+                .addGap(138, 138, 138)
                 .addComponent(btnLogOut)
-                .addContainerGap(523, Short.MAX_VALUE))
+                .addContainerGap(478, Short.MAX_VALUE))
         );
 
         SplitPane.setRightComponent(panelWork);
@@ -240,8 +237,7 @@ public class DoctorDashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnHome;
     private javax.swing.JButton btnLogOut;
     private javax.swing.JButton btnVitalSigns;
-    private javax.swing.JLabel lblRole;
-    private javax.swing.JLabel lbltitle;
+    private javax.swing.JLabel lbltitle1;
     private javax.swing.JPanel panelControl;
     private javax.swing.JPanel panelWork;
     // End of variables declaration//GEN-END:variables
