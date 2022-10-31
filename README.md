@@ -17,13 +17,9 @@
  * Doctor can create, view and update the Encounter history of patients.
  * Doctor can also create and update Vital Signs.
 
- * **Sequence Diagram**:
-	 * [System Admin](https://github.com/ChannalKishor/Channal_Kishor_002737089/blob/Assignment_2/Diagrams/SystemAdmin%20SD.png)
-	 * [Patient and Doctor](https://github.com/ChannalKishor/Channal_Kishor_002737089/blob/Assignment_2/Diagrams/Patient%20and%20Hospital%20SD.png)
-
  * **Sequence Diagram**
  ![SD](https://github.com/ChannalKishor/Channal_Kishor_002737089/blob/Assignment_2/Diagrams/SystemAdmin%20SD.png)
  
  * **Class Diagram**
- ![ERD]()
+ ![ERD](https://github.com/ChannalKishor/Channal_Kishor_002737089/blob/Assignment_2/Diagrams/Hospital%20system%20ER%20diagram.png)
  
