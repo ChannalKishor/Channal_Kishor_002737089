@@ -174,6 +174,12 @@ public class DoctorVitalSignsPanel extends javax.swing.JPanel {
 
         lblTemp.setText("Temperature:");
 
+        txtEncounterNo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEncounterNoActionPerformed(evt);
+            }
+        });
+
         lblPatientUname.setText("Patient Username:");
 
         lbltitle1.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
@@ -484,6 +490,10 @@ public class DoctorVitalSignsPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnSaveActionPerformed
 
+    private void txtEncounterNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEncounterNoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEncounterNoActionPerformed
+
     public void populateTable() {
         DefaultTableModel model = (DefaultTableModel) tableVS.getModel();
         model.setRowCount(0);
@@ -507,7 +517,7 @@ public class DoctorVitalSignsPanel extends javax.swing.JPanel {
     public void populateEncounter() {
         String[] enArr = encounterList.enArray();
         DefaultComboBoxModel h = new DefaultComboBoxModel(enArr);
-        txtHospital.setModel(h);
+        txtEncounterNo.setModel(h);
     }
 
     public void populateHospital() {

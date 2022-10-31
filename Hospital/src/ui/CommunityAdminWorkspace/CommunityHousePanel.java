@@ -136,6 +136,12 @@ public class CommunityHousePanel extends javax.swing.JPanel {
             }
         });
 
+        txtZipCode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtZipCodeActionPerformed(evt);
+            }
+        });
+
         lblCommunity.setText("Community:");
 
         txtCity.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -495,6 +501,10 @@ public class CommunityHousePanel extends javax.swing.JPanel {
             populateTable();
         }
     }//GEN-LAST:event_btnSaveActionPerformed
+
+    private void txtZipCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtZipCodeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtZipCodeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

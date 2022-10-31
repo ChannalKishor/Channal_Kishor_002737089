@@ -27,8 +27,8 @@ public class SystemPatientPanel extends javax.swing.JPanel {
     private CityDirectory cityList;
     private CommunityDirectory communityList;
     private HouseDirectory houseList;
-    
-    public SystemPatientPanel(PatientDirectory patientList,CityDirectory cityList,CommunityDirectory communityList,HouseDirectory houseList) {
+
+    public SystemPatientPanel(PatientDirectory patientList, CityDirectory cityList, CommunityDirectory communityList, HouseDirectory houseList) {
         initComponents();
         this.patientList = patientList;
         this.cityList = cityList;
@@ -43,7 +43,7 @@ public class SystemPatientPanel extends javax.swing.JPanel {
         btnClear.setVisible(false);
         btnSave.setVisible(false);
 //        btnClear.setVisible(false);
-        
+
     }
 
     /**
@@ -403,26 +403,98 @@ public class SystemPatientPanel extends javax.swing.JPanel {
 
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
         // TODO add your handling code here:
-        btnClear.setVisible(false);  
+        btnClear.setVisible(false);
         String role = txtRole.getText();
+
         Integer patientId = Integer.parseInt(txtPatientId.getText());
+        if (txtPatientId.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please enter Patient Id");
+            return;
+        } else if (patientList.uiquePatientId(patientId) == false) {
+            JOptionPane.showMessageDialog(this, "Patient Id already exist");
+            return;
+        }
+
         String username = txtUsername.getText();
+        if (username.equals("")) {
+            JOptionPane.showMessageDialog(this, "Please enter Username");
+            return;
+        } else if (patientList.uniquePatientUsername(username) == false) {
+            JOptionPane.showMessageDialog(this, "Username already exist");
+            return;
+        }
+
         String name = txtName.getText();
+        if (name.equals("")) {
+            JOptionPane.showMessageDialog(this, "Please enter your Name");
+            return;
+        }
+
         Integer age = Integer.parseInt(txtAge.getText());
+        if (txtAge.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please enter your Age");
+            return;
+        }
+
         String gender = String.valueOf(txtGender.getSelectedItem());
+        if (txtGender.getSelectedItem().equals("--Select--")) {
+            JOptionPane.showMessageDialog(this, "Please select your Gender");
+            return;
+        }
+
         Long phno = Long.parseLong(txtPhNo.getText());
+        String phNo = String.valueOf(phno);
+        if (phNo.equals("")) {
+            JOptionPane.showMessageDialog(this, "Please enter your Phone number");
+            return;
+        }
+        if (phNo.length() != 10) {
+            JOptionPane.showMessageDialog(this, "Please enter a valid Phone number");
+            return;
+        }
+
         String email = txtEmailId.getText();
+
         String house = String.valueOf(txtHouse.getSelectedItem());
+        if (txtHouse.getSelectedItem().equals("--Select--")) {
+            JOptionPane.showMessageDialog(this, "Please select the House.");
+            return;
+        }
+
         String city = String.valueOf(txtCity.getSelectedItem());
+        if (txtCity.getSelectedItem().equals("--Select--")) {
+            JOptionPane.showMessageDialog(this, "Please select the City.");
+            return;
+        }
+
         String community = String.valueOf(txtCommunity.getSelectedItem());
+        if (txtCommunity.getSelectedItem().equals("--Select--")) {
+            JOptionPane.showMessageDialog(this, "Please select the Community.");
+            return;
+        }
+
         String state = String.valueOf(txtState.getSelectedItem());
+        if (txtState.getSelectedItem().equals("--Select--")) {
+            JOptionPane.showMessageDialog(this, "Please select the State.");
+            return;
+        }
+
         String country = String.valueOf(txtCountry.getSelectedItem());
-//        String address = txtAddress.getText();
+        if (txtCountry.getSelectedItem().equals("--Select--")) {
+            JOptionPane.showMessageDialog(this, "Please select the Country.");
+            return;
+        }
+
+//      String address = txtAddress.getText();
         char[] pass = txtPassword.getPassword();
         String password = new String(pass);
-        
+        if (txtPassword.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please enter your Password.");
+            return;
+        }
+
         Patient newPatient = patientList.addPatient();
-        
+
         newPatient.setRole(role);
         newPatient.setPatientId(patientId);
         newPatient.setUsername(username);
@@ -438,9 +510,9 @@ public class SystemPatientPanel extends javax.swing.JPanel {
         newPatient.setCountry(country);
 //        newPatient.setAddress(address);
         newPatient.setPassword(password);
-        
+
         JOptionPane.showMessageDialog(this, "Patient Created Successfully");
-        
+
         txtPatientId.setText("");
         txtUsername.setText("");
         txtName.setText("");
@@ -455,28 +527,28 @@ public class SystemPatientPanel extends javax.swing.JPanel {
         txtCommunity.setSelectedIndex(0);
 //        txtAddress.setText("");
         txtPassword.setText("");
-        
+
         populateTable();
-        
+
     }//GEN-LAST:event_btnCreateActionPerformed
 
-    public void populateTable(){
+    public void populateTable() {
         DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
         model.setRowCount(0);
-        
-        for(Patient pat : patientList.getPatientList()){
-            
+
+        for (Patient pat : patientList.getPatientList()) {
+
             Object[] row = new Object[5];
-            row[0] = pat; 
+            row[0] = pat;
             row[1] = pat.getName();
             row[2] = pat.getAge();
             row[3] = pat.getGender();
             row[4] = pat.getPhno();
-             
+
             model.addRow(row);
         }
     }
-    
+
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNameActionPerformed
@@ -486,16 +558,14 @@ public class SystemPatientPanel extends javax.swing.JPanel {
         btnSave.setVisible(false);
         btnClear.setVisible(true);
         Integer selectedRowIndex = tablePatient.getSelectedRow();
-        
-        if (selectedRowIndex<0){
-            
+
+        if (selectedRowIndex < 0) {
+
             JOptionPane.showMessageDialog(this, "Please select a row to view.");
             return;
-        }
-        
-        else{
+        } else {
             DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
-            Patient selectedPat = (Patient) model.getValueAt(selectedRowIndex,0);
+            Patient selectedPat = (Patient) model.getValueAt(selectedRowIndex, 0);
 
             txtPatientId.setText(String.valueOf(selectedPat.getPatientId()));
             txtUsername.setText(selectedPat.getUsername());
@@ -526,19 +596,17 @@ public class SystemPatientPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         btnClear.setVisible(false);
         Integer selectedRowIndex = tablePatient.getSelectedRow();
-        
-        if (selectedRowIndex<0){
-            
+
+        if (selectedRowIndex < 0) {
+
             JOptionPane.showMessageDialog(this, "Please select a row to delete.");
             return;
-        }
-        
-        else{
+        } else {
             DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
-            Patient selectedPat = (Patient) model.getValueAt(selectedRowIndex,0);
-            
+            Patient selectedPat = (Patient) model.getValueAt(selectedRowIndex, 0);
+
             patientList.deletePatient(selectedPat);
-            
+
             JOptionPane.showMessageDialog(this, "Patient deleted successfully.");
             populateTable();
         }
@@ -567,16 +635,14 @@ public class SystemPatientPanel extends javax.swing.JPanel {
         btnSave.setVisible(true);
         btnClear.setVisible(true);
         Integer selectedRowIndex = tablePatient.getSelectedRow();
-        
-        if (selectedRowIndex<0){
-            
+
+        if (selectedRowIndex < 0) {
+
             JOptionPane.showMessageDialog(this, "Please select a row to view.");
             return;
-        }
-        
-        else{
+        } else {
             DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
-            Patient selectedPat = (Patient) model.getValueAt(selectedRowIndex,0);
+            Patient selectedPat = (Patient) model.getValueAt(selectedRowIndex, 0);
 
             txtPatientId.setText(String.valueOf(selectedPat.getPatientId()));
             txtUsername.setText(selectedPat.getUsername());
@@ -592,72 +658,140 @@ public class SystemPatientPanel extends javax.swing.JPanel {
             txtHouse.setSelectedItem(selectedPat.getHouse());
 //            txtAddress.setText(selectedPat.getAddress());
             txtPassword.setText(selectedPat.getPassword());
-            
+
         }
     }//GEN-LAST:event_btnEditActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
         Integer selectedRowIndex = tablePatient.getSelectedRow();
-        
-        if (selectedRowIndex<0){
-            
+
+        if (selectedRowIndex < 0) {
+
             JOptionPane.showMessageDialog(this, "Please select a row to view.");
             return;
-        }
-        
-        else{
+        } else {
             DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
-            Patient selectedPat = (Patient) model.getValueAt(selectedRowIndex,0);
-            
+            Patient selectedPat = (Patient) model.getValueAt(selectedRowIndex, 0);
+
             selectedPat.setPatientId(Integer.parseInt(txtPatientId.getText()));
+            if (txtPatientId.getText().equals("")) {
+                JOptionPane.showMessageDialog(this, "Please enter Patient Id");
+                return;
+            } else if (patientList.uiquePatientId(Integer.parseInt(txtPatientId.getText())) == false) {
+                JOptionPane.showMessageDialog(this, "Patient Id already exist");
+                return;
+            }
+
             selectedPat.setUsername(txtUsername.getText());
+            if (txtUsername.getText().equals("")) {
+                JOptionPane.showMessageDialog(this, "Please enter Username");
+                return;
+            } else if (patientList.uniquePatientUsername(txtUsername.getText()) == false) {
+                JOptionPane.showMessageDialog(this, "Username already exist");
+                return;
+            }
+
             selectedPat.setName(txtName.getText());
+            if (txtName.getText().equals("")) {
+                JOptionPane.showMessageDialog(this, "Please enter your Name");
+                return;
+            }
+
             selectedPat.setAge(Integer.parseInt(txtAge.getText()));
+            if (txtAge.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Please enter your Age");
+                return;
+            }
+
             selectedPat.setGender(String.valueOf(txtGender.getSelectedItem()));
+            if (txtGender.getSelectedItem().equals("--Select--")) {
+                JOptionPane.showMessageDialog(this, "Please select your Gender");
+                return;
+            }
+
             selectedPat.setPhno(Long.parseLong(txtPhNo.getText()));
+            if (txtPhNo.getText().equals("")) {
+                JOptionPane.showMessageDialog(this, "Please enter your Phone number");
+                return;
+            }
+            if (txtPhNo.getText().length() != 10) {
+                JOptionPane.showMessageDialog(this, "Please enter a valid Phone number");
+                return;
+            }
+
             selectedPat.setEmail(txtEmailId.getText());
+
             selectedPat.setCity(String.valueOf(txtCity.getSelectedItem()));
+            if (txtCity.getSelectedItem().equals("--Select--")) {
+                JOptionPane.showMessageDialog(this, "Please select the City.");
+                return;
+            }
+
             selectedPat.setCommunity(String.valueOf(txtCommunity.getSelectedItem()));
+            if (txtCommunity.getSelectedItem().equals("--Select--")) {
+                JOptionPane.showMessageDialog(this, "Please select the Community.");
+                return;
+            }
+
             selectedPat.setHouse(String.valueOf(txtHouse.getSelectedItem()));
+            if (txtHouse.getSelectedItem().equals("--Select--")) {
+                JOptionPane.showMessageDialog(this, "Please select the House.");
+                return;
+            }
+
             selectedPat.setState(String.valueOf(txtState.getSelectedItem()));
+            if (txtState.getSelectedItem().equals("--Select--")) {
+                JOptionPane.showMessageDialog(this, "Please select the State.");
+                return;
+            }
+
             selectedPat.setCountry(String.valueOf(txtCountry.getSelectedItem()));
+            if (txtCountry.getSelectedItem().equals("--Select--")) {
+                JOptionPane.showMessageDialog(this, "Please select the Country.");
+                return;
+            }
+
 //            selectedPat.setAddress(txtAddress.getText());
             selectedPat.setPassword(txtPassword.getText());
-            
+            if (txtPassword.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Please enter your Password.");
+                return;
+            }
+
             JOptionPane.showMessageDialog(this, "Patient details updated successfully.");
-            
+
             populateTable();
-            
+
         }
-        
+
     }//GEN-LAST:event_btnSaveActionPerformed
-    
-    public void populateHouse(){
+
+    public void populateHouse() {
         String[] houArr = houseList.houseArray();
         DefaultComboBoxModel h = new DefaultComboBoxModel(houArr);
         txtHouse.setModel(h);
     }
-    
-    public void populateCity(){
+
+    public void populateCity() {
         String[] cityArr = cityList.cityArray();
         DefaultComboBoxModel c = new DefaultComboBoxModel(cityArr);
         txtCity.setModel(c);
     }
-    
-    public void populateState(){
+
+    public void populateState() {
         String[] stateArr = cityList.stateArray();
         DefaultComboBoxModel s = new DefaultComboBoxModel(stateArr);
         txtState.setModel(s);
     }
-    
-    public void populateCountry(){
+
+    public void populateCountry() {
         String[] countryArr = cityList.countryArray();
         DefaultComboBoxModel c = new DefaultComboBoxModel(countryArr);
         txtCountry.setModel(c);
     }
-    
-     public void populateComm(){
+
+    public void populateComm() {
         String[] commArr = communityList.commArray();
         DefaultComboBoxModel c = new DefaultComboBoxModel(commArr);
         txtCommunity.setModel(c);
