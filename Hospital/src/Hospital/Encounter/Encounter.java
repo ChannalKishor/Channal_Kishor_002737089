@@ -25,7 +25,7 @@ public class Encounter {
         return encounterNo;
     }
 
-    public void setEncounterNo(String encounyterNo) {
+    public void setEncounterNo(String encounterNo) {
         this.encounterNo = encounterNo;
     }
 

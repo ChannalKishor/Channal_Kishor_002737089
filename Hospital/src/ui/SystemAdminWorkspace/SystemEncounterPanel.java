@@ -28,14 +28,14 @@ public class SystemEncounterPanel extends javax.swing.JPanel {
     HospitalDirectory hospitalList;
     PatientDirectory patientList;
     DoctorDirectory doctorList;
-    
-    public SystemEncounterPanel(EncounterDirectory encounterList,HospitalDirectory hospitalList,PatientDirectory patientList,DoctorDirectory doctorList) {
+
+    public SystemEncounterPanel(EncounterDirectory encounterList, HospitalDirectory hospitalList, PatientDirectory patientList, DoctorDirectory doctorList) {
         initComponents();
         this.encounterList = encounterList;
         this.hospitalList = hospitalList;
         this.patientList = patientList;
         this.doctorList = doctorList;
-        
+
         populateTable();
         populateHospital();
         populateDoctor();
@@ -387,15 +387,13 @@ public class SystemEncounterPanel extends javax.swing.JPanel {
         btnClear.setVisible(true);
         Integer selectedRowIndex = tableEncounter.getSelectedRow();
 
-        if (selectedRowIndex<0){
+        if (selectedRowIndex < 0) {
 
             JOptionPane.showMessageDialog(this, "Please select a row to view.");
             return;
-        }
-
-        else{
+        } else {
             DefaultTableModel model = (DefaultTableModel) tableEncounter.getModel();
-            Encounter selectedEn = (Encounter) model.getValueAt(selectedRowIndex,0);
+            Encounter selectedEn = (Encounter) model.getValueAt(selectedRowIndex, 0);
 
             txtEncounterNo.setText(selectedEn.getEncounterNo());
             txtHospital.setSelectedItem(selectedEn.getHospital());
@@ -415,18 +413,16 @@ public class SystemEncounterPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         btnSave.setVisible(true);
         btnClear.setVisible(true);
-        
+
         Integer selectedRowIndex = tableEncounter.getSelectedRow();
 
-        if (selectedRowIndex<0){
+        if (selectedRowIndex < 0) {
 
             JOptionPane.showMessageDialog(this, "Please select a row to view.");
             return;
-        }
-
-        else{
+        } else {
             DefaultTableModel model = (DefaultTableModel) tableEncounter.getModel();
-            Encounter selectedEn = (Encounter) model.getValueAt(selectedRowIndex,0);
+            Encounter selectedEn = (Encounter) model.getValueAt(selectedRowIndex, 0);
 
             txtEncounterNo.setText(selectedEn.getEncounterNo());
             txtHospital.setSelectedItem(selectedEn.getHospital());
@@ -448,20 +444,18 @@ public class SystemEncounterPanel extends javax.swing.JPanel {
         btnClear.setVisible(false);
         Integer selectedRowIndex = tableEncounter.getSelectedRow();
 
-        if (selectedRowIndex<0){
+        if (selectedRowIndex < 0) {
 
             JOptionPane.showMessageDialog(this, "Please select a row to delete.");
             return;
-        }
-
-        else{
+        } else {
             DefaultTableModel model = (DefaultTableModel) tableEncounter.getModel();
-            Encounter selectedEn = (Encounter) model.getValueAt(selectedRowIndex,0);
+            Encounter selectedEn = (Encounter) model.getValueAt(selectedRowIndex, 0);
 
             encounterList.deleteEncounter(selectedEn);
 
             JOptionPane.showMessageDialog(this, "Encounter deleted successfully.");
-            
+
             populateTable();
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
@@ -492,16 +486,14 @@ public class SystemEncounterPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         Integer selectedRowIndex = tableEncounter.getSelectedRow();
 
-        if (selectedRowIndex<0){
+        if (selectedRowIndex < 0) {
 
             JOptionPane.showMessageDialog(this, "Please select a row to view.");
             return;
-        }
-
-        else{
+        } else {
             DefaultTableModel model = (DefaultTableModel) tableEncounter.getModel();
-            Encounter selectedEn = (Encounter) model.getValueAt(selectedRowIndex,0);
-            
+            Encounter selectedEn = (Encounter) model.getValueAt(selectedRowIndex, 0);
+
             selectedEn.setEncounterNo(txtEncounterNo.getText());
             selectedEn.setHospital(String.valueOf(txtHospital.getSelectedItem()));
             selectedEn.setDoctorName(String.valueOf(txtDoctorName.getSelectedItem()));
@@ -512,8 +504,6 @@ public class SystemEncounterPanel extends javax.swing.JPanel {
             selectedEn.setDate(txtDate.getText());
             selectedEn.setTime(txtTime.getText());
             selectedEn.setComment(txtComment.getText());
-
-            
 
             JOptionPane.showMessageDialog(this, "Encounter details updated successfully.");
 
@@ -530,46 +520,45 @@ public class SystemEncounterPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTimeActionPerformed
 
-    public void populateTable(){
+    public void populateTable() {
         DefaultTableModel model = (DefaultTableModel) tableEncounter.getModel();
         model.setRowCount(0);
-        
-        for(Encounter en : encounterList.getEncounterList()){
-            
+
+        for (Encounter en : encounterList.getEncounterList()) {
+
             Object[] row = new Object[6];
-            row[0] = en; 
+            row[0] = en;
             row[1] = en.getHospital();
             row[2] = en.getDoctorName();
             row[3] = en.getPatientName();
             row[4] = en.getDate();
             row[5] = en.getTime();
-           
-             
+
             model.addRow(row);
         }
     }
-    
-    public void populateHospital(){
+
+    public void populateHospital() {
         String[] hosArr = hospitalList.hosArray();
         DefaultComboBoxModel h = new DefaultComboBoxModel(hosArr);
         txtHospital.setModel(h);
     }
-    
-    public void populateDoctor(){
+
+    public void populateDoctor() {
         String[] docNameArr = doctorList.docNameArray();
         DefaultComboBoxModel dn = new DefaultComboBoxModel(docNameArr);
         txtDoctorName.setModel(dn);
-        
+
         String[] docUnameArr = doctorList.docUnameArray();
         DefaultComboBoxModel du = new DefaultComboBoxModel(docUnameArr);
-        txtDoctorUsername.setModel(du);   
+        txtDoctorUsername.setModel(du);
     }
-    
-    public void populatePatient(){
+
+    public void populatePatient() {
         String[] patNameArr = patientList.patNameArray();
         DefaultComboBoxModel pn = new DefaultComboBoxModel(patNameArr);
         txtPatientName.setModel(pn);
-        
+
         String[] patUnameArr = patientList.patUnameArray();
         DefaultComboBoxModel pu = new DefaultComboBoxModel(patUnameArr);
         txtPatientusername.setModel(pu);
