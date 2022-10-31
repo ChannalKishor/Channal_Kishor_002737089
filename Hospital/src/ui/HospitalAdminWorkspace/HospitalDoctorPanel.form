@@ -62,12 +62,10 @@
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="txtAge" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtName" linkSize="5" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtDoctorId" linkSize="5" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtUsername" linkSize="5" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtRole" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="txtName" linkSize="5" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtDoctorId" linkSize="5" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtUsername" linkSize="5" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtRole" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
                                   <Component id="txtGender" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
                                   <Component id="txtEmailId" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
                                   <Component id="txtPhNo1" linkSize="5" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
@@ -413,6 +411,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="txtHospital">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtHospitalActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>

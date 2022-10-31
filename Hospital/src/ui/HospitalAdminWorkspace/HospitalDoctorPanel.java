@@ -186,6 +186,12 @@ public class HospitalDoctorPanel extends javax.swing.JPanel {
 
         lblHospital.setText("Hospital:");
 
+        txtHospital.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtHospitalActionPerformed(evt);
+            }
+        });
+
         lblYearsOfExp.setText("Years of Experience:");
 
         lblState.setText("State:");
@@ -266,11 +272,10 @@ public class HospitalDoctorPanel extends javax.swing.JPanel {
                                 .addGap(39, 39, 39)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtName)
-                                        .addComponent(txtDoctorId)
-                                        .addComponent(txtUsername)
-                                        .addComponent(txtRole, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtName)
+                                    .addComponent(txtDoctorId)
+                                    .addComponent(txtUsername)
+                                    .addComponent(txtRole, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtEmailId, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtPhNo1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -630,6 +635,10 @@ public class HospitalDoctorPanel extends javax.swing.JPanel {
         txtCountry.setSelectedIndex(0);
         txtPassword.setText("");
     }//GEN-LAST:event_btnClearActionPerformed
+
+    private void txtHospitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHospitalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtHospitalActionPerformed
 
     public void populateTable(){
         DefaultTableModel model = (DefaultTableModel) tableDoctor.getModel();

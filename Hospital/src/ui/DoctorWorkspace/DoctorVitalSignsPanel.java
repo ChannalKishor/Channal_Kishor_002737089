@@ -167,6 +167,11 @@ public class DoctorVitalSignsPanel extends javax.swing.JPanel {
         });
 
         txtDoctor.setEditable(false);
+        txtDoctor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDoctorActionPerformed(evt);
+            }
+        });
 
         lblBP.setText("BP:");
 
@@ -355,7 +360,7 @@ public class DoctorVitalSignsPanel extends javax.swing.JPanel {
 
         txtEncounterNo.setSelectedIndex(0);
         txtHospital.setSelectedIndex(0);
-        txtDoctor.setText("");
+//        txtDoctor.setText("");
 //        txtDoctorUsername.setSelectedIndex(0);
         txtPatientName.setSelectedIndex(0);
         txtPatientUname.setSelectedIndex(0);
@@ -442,7 +447,7 @@ public class DoctorVitalSignsPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         txtEncounterNo.setSelectedIndex(0);
         txtHospital.setSelectedIndex(0);
-        txtDoctor.setText("");
+//        txtDoctor.setText("");
 //        txtDoctorUsername.setSelectedIndex(0);
         txtPatientName.setSelectedIndex(0);
         txtPatientUname.setSelectedIndex(0);
@@ -493,6 +498,10 @@ public class DoctorVitalSignsPanel extends javax.swing.JPanel {
     private void txtEncounterNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEncounterNoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEncounterNoActionPerformed
+
+    private void txtDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoctorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDoctorActionPerformed
 
     public void populateTable() {
         DefaultTableModel model = (DefaultTableModel) tableVS.getModel();
