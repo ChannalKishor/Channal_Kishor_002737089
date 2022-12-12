@@ -47,7 +47,4 @@ NGO is a non-profit organization that operates independently of any government a
 ------------
 ![alt text](http://url/to/img.png)
 -----------------------------------------------------------------------
-
-This was added on 14/Dec/2022. 
-
-This was added on "2022-12-11 20:45:00"
+Time: 11/Dec/2022 08:45 PM 
