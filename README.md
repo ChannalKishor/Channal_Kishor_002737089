@@ -10,9 +10,9 @@ NGO is a non-profit organization that operates independently of any government a
 
 ### Project Description
 ------------
-- CardLayout
-- Email Service
-- DB40 Database
+- CardLayout : It treats each component in the container as a card. Only one card is visible at a time, and the container acts as a stack of cards.
+- Email Service : 
+- DB4o Database : open-source object database for Java and .NET applications.
 
 ###### Enterprise 1: ChildCare NGO
 	organization 1: NGO
