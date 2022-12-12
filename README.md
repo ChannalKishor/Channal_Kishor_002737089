@@ -36,9 +36,10 @@ NGO is a non-profit organization that operates independently of any government a
 
 ### Class Diagram
 ------------
-
+![alt text](http://url/to/img.png)
 
 
 
 ### Class Design Diagram
 ------------
+![alt text](http://url/to/img.png)
