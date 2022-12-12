@@ -1,5 +1,8 @@
 # NGO for Childern 
-------------
+![alt text](http://url/to/img.png)
+
+
+
 ### Motivation
 ------------
 NGO is a non-profit organization that operates independently of any government and is a social voluntary organization of social activist, group of persons, community, volunteers and citizens who are associated for social welfare and social development. NGOs are usually funded by donations. There are various NGO's workking verity of work through the world. In this project we are mainly focusing on NGO for childern. NGO for childcare system mainly focuses on nurture activities and programs which will reach the most impecunious and vulnerable childern from our community. Our aim is that childern who are beaming future of our country should not be deprived from any basic facilites like education and shelter. Hence we are focusing on childern education along with their health.
